@@ -24,5 +24,5 @@ jobs:
         run: |
           # Assuming the .exe is located in a folder called 'build' in the repository
           # You can adjust the path to your .exe file as necessary
-           cmd /c "'C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe' -project 'C:\SimpleSample\SimpleSample.nlp' -noGUI -launch 'scenario1' -report 'C:\SimpleSample\SampleReport.html'"
+           powershell -Command "& 'C:/Program Files/NeoLoad 2024.2/bin/NeoLoadCMD.exe' -project 'C:/SimpleSample/SimpleSample.nlp' -noGUI -launch 'scenario1' -report 'C:/SimpleSample/SampleReport.html'"
 
