@@ -19,9 +19,9 @@ jobs:
        # with:
       #    dotnet-version: '6.x'  # Replace with the version your .exe depends on
 
-      # Step 3: Run the .exe file
-      - name: Run .exe executable
+      # Step 3: Run the test
+      - name: Run NeoLoad Test
         run: |
           # Assuming the .exe is located in a folder called 'build' in the repository
           # You can adjust the path to your .exe file as necessary
-          "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "C:\SimpleSample\SimpleSample.nlp" -noGUI -launch "scenario1" -report "C:\SimpleSample\SampleReport.html"
+          C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe -project C:\SimpleSample\SimpleSample.nlp -noGUI -launch scenario1 -report C:\SimpleSample\SampleReport.html
