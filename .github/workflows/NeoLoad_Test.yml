@@ -8,18 +8,6 @@ jobs:
     runs-on: windows-latest  # Use the latest Windows runner 
 
     steps:
-      # Step 1: Checkout the repository
-      #- name: Checkout repository
-      #  uses: actions/checkout@v2
-
-      # Step 2: Set up .NET (if needed) or any environment setup required for the .exe
-      # Example: Installing .NET SDK if the .exe requires it
-      #- name: Set up .NET
-      #  uses: actions/setup-dotnet@v2
-       # with:
-      #    dotnet-version: '6.x'  # Replace with the version your .exe depends on
-
-      # Step 3: Run the test
       - name: Run NeoLoad Test
         run:
            "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "C:\SimpleSample\SimpleSample.nlp" -noGUI -launch "scenario1" -report "C:\SimpleSample\SampleReport.html"
