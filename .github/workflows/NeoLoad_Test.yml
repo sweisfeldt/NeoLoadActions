@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Run NeoLoad Test
         run: |
-           "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project C:\SimpleSample\SimpleSample.nlp -noGUI -launch "scenario1" -report "C:\SimpleSample\SampleReport.html"
+           "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project C:\SimpleSample\SimpleSample.nlp -noGUI -launch scenario1 -report C:\SimpleSample\SampleReport.html
            #"C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" 
         shell: cmd
 
