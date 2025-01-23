@@ -18,7 +18,7 @@ jobs:
           
       - name: Verify NeoLoad Installation
         run: |
-          dir "C:\Program Files\NeoLoad 2024.2\bin"
+          #dir "C:\Program Files\NeoLoad 2024.2\bin"
         shell: cmd
 
       - name: Debug - List Files in SimpleSample Directory
