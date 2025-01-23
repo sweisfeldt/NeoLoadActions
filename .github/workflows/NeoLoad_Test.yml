@@ -8,18 +8,7 @@ jobs:
     runs-on: windows-latest  # Use the latest Windows runner 
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          repository: sweisfeldt/NeoLoadActions
-          ref: master  # Specify the master branch
-          path: NeoLoadActions
-          fetch-depth: 1
-          
-      - name: Debug - List All Files in Workspace
-        run: |
-          dir "${{ github.workspace }}" /s /b
-        shell: cmd
+
         
       - name: Run NeoLoad Test
         run: |
