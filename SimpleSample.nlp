@@ -1,0 +1,16 @@
+# Project description file
+
+project.name=SimpleSample
+project.version=8.10
+project.original.version=8.10
+product.name=NeoLoad
+product.original.name=NeoLoad
+ssh.trustUnknownHosts.MONITORS=false
+monitor.tls.insecure=false
+product.original.version=2024.3.0
+project.is-open-test-settings-after-upload=false
+project.id=36f36ff6-e07f-4b3e-8e0a-f141674053f1
+project.config.path=config.zip
+project.config.storage=ZIP
+team.server.enabled=true
+team.server.project=/sweisfeldt/NeoLoadActions

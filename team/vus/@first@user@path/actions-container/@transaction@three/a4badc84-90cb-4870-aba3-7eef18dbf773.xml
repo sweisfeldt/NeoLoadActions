@@ -1,0 +1,10 @@
+<http-action actionType="1" extractorInjectPathPolicy="2"
+    extractorPathPolicy="1" followRedirects="false"
+    generatedByClient="false" linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="" path="/" postType="1" serverUid="QA"
+    slaProfileEnabled="false" uid="a4badc84-90cb-4870-aba3-7eef18dbf773" useKeepAlive="false">
+    <responsePageFileDescription>team/vus/@first@user@path/%resources%/recorded-responses/res_a4badc84-90cb-4870-aba3-7eef18dbf773</responsePageFileDescription>
+    <responseHeaders/>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
