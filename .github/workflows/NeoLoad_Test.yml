@@ -8,20 +8,11 @@ jobs:
     runs-on: windows-latest  # Use the latest Windows runner 
 
     steps:
-      - name: Create Sample Directory and File
-        run: |
-          mkdir "C:\SimpleSample"
-          echo Sample > "C:\SimpleSample\SimpleSample.nlp"
-        shell: cmd
-
-      - name: Print working directory and list files
-        run: |
-          echo Current Directory: %cd%
-          dir "C:\Program Files\NeoLoad 2024.2\bin"
-          dir "C:\SimpleSample"
-        shell: cmd
-
       - name: Run NeoLoad Test
+        env:
+          NEOLOAD_CMD: "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe"
+          PROJECT_FILE: "C:\SimpleSample\SimpleSample.nlp"
+          REPORT_FILE: "C:\SimpleSample\SampleReport.html"
         run: |
-          "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "C:\SimpleSample\SimpleSample.nlp" -noGUI -launch "scenario1" -report "C:\SimpleSample\SampleReport.html"
+          "%NEOLOAD_CMD%" -project "%PROJECT_FILE%" -noGUI -launch "scenario1" -report "%REPORT_FILE%"
         shell: cmd
