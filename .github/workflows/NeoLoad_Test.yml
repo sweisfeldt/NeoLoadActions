@@ -12,7 +12,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: sweisfeldt/NeoLoadActions
+          ref: master  # Specify the master branch
           path: NeoLoadActions
+          fetch-depth: 1
 
       - name: Run NeoLoad Test
         run: |
