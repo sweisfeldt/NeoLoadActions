@@ -8,6 +8,12 @@ jobs:
     runs-on: windows-latest  # Use the latest Windows runner 
 
     steps:
+      - name: Create Sample Directory and File
+        run: |
+          mkdir "C:\SimpleSample"
+          echo Sample > "C:\SimpleSample\SimpleSample.nlp"
+        shell: cmd
+
       - name: Print working directory and list files
         run: |
           echo Current Directory: %cd%
