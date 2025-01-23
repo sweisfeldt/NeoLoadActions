@@ -8,6 +8,11 @@ jobs:
     runs-on: windows-latest  # Use the latest Windows runner 
 
     steps:
+      - name: Print working directory
+        run: |
+          echo %cd%
+          dir
+        shell: cmd
       - name: Run NeoLoad Test
         run: |
           "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" ^
