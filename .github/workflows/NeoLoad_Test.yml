@@ -23,5 +23,5 @@ jobs:
         
       - name: Run NeoLoad Test
         run: |
-          #"C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "${{ github.workspace }}\NeoLoadActions\SimpleSample\SimpleSample.nlp" -noGUI -launch "scenario1" -report "${{ github.workspace }}\NeoLoadActions\SimpleSample\SampleReport.html"
+          "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "${{ github.workspace }}\NeoLoadActions\NeoLoadActions\SimpleSample.nlp" -noGUI -launch "scenario1" -report "${{ github.workspace }}\NeoLoadActions\NeoLoadActions\SampleReport.html"
         shell: cmd
