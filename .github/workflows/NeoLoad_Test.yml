@@ -15,8 +15,18 @@ jobs:
           ref: master  # Specify the master branch
           path: NeoLoadActions
           fetch-depth: 1
+          
+      - name: Verify NeoLoad Installation
+        run: |
+          dir "C:\Program Files\NeoLoad 2024.2\bin"
+        shell: cmd
 
+      - name: Debug - List Files in SimpleSample Directory
+        run: |
+          dir "${{ github.workspace }}\NeoLoadActions\SimpleSample"
+        shell: cmd
+        
       - name: Run NeoLoad Test
         run: |
-          "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "${{ github.workspace }}\NeoLoadActions\SimpleSample\SimpleSample.nlp" -noGUI -launch "scenario1" -report "${{ github.workspace }}\NeoLoadActions\SimpleSample\SampleReport.html"
+          #"C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "${{ github.workspace }}\NeoLoadActions\SimpleSample\SimpleSample.nlp" -noGUI -launch "scenario1" -report "${{ github.workspace }}\NeoLoadActions\SimpleSample\SampleReport.html"
         shell: cmd
