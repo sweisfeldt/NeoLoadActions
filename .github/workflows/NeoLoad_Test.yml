@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Run NeoLoad Test
         env:
-          NEOLOAD_CMD: "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe"
+          NEOLOAD_CMD: C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe
           PROJECT_FILE: C:\SimpleSample\SimpleSample.nlp
           REPORT_FILE: C:\SimpleSample\SampleReport.html
         run: |
