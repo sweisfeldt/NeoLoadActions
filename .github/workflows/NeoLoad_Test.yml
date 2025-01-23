@@ -8,10 +8,11 @@ jobs:
     runs-on: windows-latest  # Use the latest Windows runner 
 
     steps:
-      - name: Print working directory
+      - name: Print working directory and list files
         run: |
-          echo %cd%
-          dir
+          echo Current Directory: %cd%
+          dir "C:\Program Files\NeoLoad 2024.2\bin"
+          dir "C:\SimpleSample"
         shell: cmd
       - name: Run NeoLoad Test
         run: |
