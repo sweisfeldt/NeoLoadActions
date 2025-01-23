@@ -6,19 +6,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest  # Use the latest Windows runner 
-
-    steps:
-      - name: Verify NeoLoad Installation
-        run: |
-          if exist "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" (
-            echo "NeoLoadCMD.exe found."
-          ) else (
-            echo "NeoLoadCMD.exe not found."
-            exit /b 1
-          )
-        shell: cmd
-        
+    steps:      
       - name: Run NeoLoad Test
         run: |
           "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" 
-        shell: cmd
+        shell: pwsh
