@@ -4,8 +4,9 @@ on:
   workflow_dispatch:  # This enables the manual trigger button in GitHub UI
   
 jobs:
-  build:
+  run-neoload:
     runs-on: self-hosted  # Use the latest Windows runner 
+    
     steps:      
       - name: Checkout repository
         uses: actions/checkout@v2
