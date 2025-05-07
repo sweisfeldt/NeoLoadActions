@@ -4,7 +4,6 @@ on:
   workflow_dispatch:  # Allows manual triggering from the GitHub UI
 
 jobs:
-  run-neoload:
     runs-on: self-hosted  # Corrected from list to single string
 
     steps:
