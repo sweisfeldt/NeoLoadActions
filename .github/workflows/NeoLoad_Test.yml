@@ -5,7 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: windows-latest  # Use the latest Windows runner 
+    runs-on: self-hosted  # Use the latest Windows runner 
     steps:      
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -14,7 +14,9 @@ jobs:
           ref: master  # Specify the master branch
           path: NeoLoadActions
           fetch-depth: 1
-      - name: Run NeoLoad Test
+    - name: Run NeoLoad commands in cmd
         run: |
-           & "C:\Program Files\NeoLoad 2024.2\bin\NeoLoadCMD.exe" -project "${{ github.workspace }}\NeoLoadActions\NeoLoadActions\SimpleSample.nlp" -noGUI -launch "scenario1" -report "${{ github.workspace }}\NeoLoadActions\NeoLoadActions\SampleReport.html"
-        shell: pwsh
+          neoload login 9e735913961c346857f02a7b923a9b485f6e739c25458206
+          neoload workspaces use CAT_Financial
+          neoload run SampleTest
+        shell: cmd
