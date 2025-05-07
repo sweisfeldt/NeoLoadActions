@@ -1,23 +1,19 @@
-name: Run NeoLoad Test
+name: Run NeoLoad Test on Self-Hosted Windows Runner (cmd)
 
 on:
   workflow_dispatch:  # Allows manual triggering from the GitHub UI
 
 jobs:
   run-neoload:
-    runs-on: self-hosted
+    runs-on: self-hosted  # Corrected from list to single string
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up NeoLoad CLI (if needed)
-        run: |
-          echo "Assuming NeoLoad CLI is already installed. If not, add install step here."
-
-      - name: Run NeoLoad commands
+      - name: Run NeoLoad commands in cmd
+        shell: cmd
         run: |
           neoload login 9e735913961c346857f02a7b923a9b485f6e739c25458206
           neoload workspaces use CAT_Financial
           neoload run SampleTest
-        shell: cmd
