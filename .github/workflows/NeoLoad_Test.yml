@@ -1,4 +1,4 @@
-name: Run NeoLoadCMD.exe on Windows
+name: Run NeoLoad from GitHub Actions
 
 on:
   workflow_dispatch:  # This enables the manual trigger button in GitHub UI
