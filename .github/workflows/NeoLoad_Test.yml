@@ -1,21 +1,21 @@
-name: Run NeoLoad from GitHub Actions
+name: Run NeoLoad Test
 
 on:
-  workflow_dispatch:  # This enables the manual trigger button in GitHub UI
-  
+  workflow_dispatch:  # Allows manual triggering from the GitHub UI
+
 jobs:
   run-neoload:
-    runs-on: self-hosted  # Use the latest Windows runner 
-    
-    steps:      
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          repository: sweisfeldt/NeoLoadActions
-          ref: master  # Specify the master branch
-          path: NeoLoadActions
-          fetch-depth: 1
-    - name: Run NeoLoad commands in cmd
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up NeoLoad CLI (if needed)
+        run: |
+          echo "Assuming NeoLoad CLI is already installed. If not, add install step here."
+
+      - name: Run NeoLoad commands
         run: |
           neoload login 9e735913961c346857f02a7b923a9b485f6e739c25458206
           neoload workspaces use CAT_Financial
